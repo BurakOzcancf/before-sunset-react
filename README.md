@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+<h1 align="center"> what to EAT?</h1>
+<!-- <img src=./public/assets/what-to-eat.PNG> -->
+<p>It's a kanban board to list the books of a certain author; it distributes the books to columns by last published date. Books are retrieved from the openlibrary.org API.</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of contents
 
-## Available Scripts
+- [Overview](#overview)
+  - [Backstory](#backstory)
+  - [User Stories](#user-stories)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [Tech I used](#tech-i-used)
+  - [What I learned](#what-i-learned)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
 
-In the project directory, you can run:
+## Overview
 
-### `npm start`
+### Backstory?
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The user is a book collector, especially into < your favorite author here > 's books and wants to list all his/her books by latest publish year so she'll know where to look. This super-productive author started writing many years ago, wrote for more than 60 years, and published more than 100's of books. We need this kanban to be rock-solid.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### User Stories
 
-### `npm test`
+- As a user, I want to see the books of < your favorite author here > in a kanban view, so that I can visualize them
+- As a user, I want to be able to type in the author id so that I can display books from various authors
+- As a user, I want to see the books released in English only, so that I don't see the books which I'm not interested in
+- As a user, I want books to be distributed (to columns) by latest publish year so that I can visualize them by publishing year
+- As a user, I want kanban columns to be ordered in an ascending way so that I can keep track of the columns easily
+- As a user, I want to see the book title clearly in the cards, so that I know each card is about a book
+- As a user, I want to see the first published year in the cards, so that I know the year the book was first released
+- As a user, I want to see the number of editions in the cards, so that I know how many different editions the book has
+- As a user, I want kanban cards to be collapsible, so that I can view more books in each column
+- As a user, I don't want to see the empty values in the UI, so that I'm not distracted by them
+- As a user, I want each column in kanban to have a different color so that I can track the columns in case there are many
+- As a user, I want author name to be stated correctly as a board title so that I'm not confused by any chance
+- As a user, I want to scroll horizontally to see the columns that didn't fit the screen, so that the columns maintain a certain width
+- As a user, I want to know if the page is loading, so that I don't leave the app accidentally
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Links
 
-### `npm run build`
+- [The GitHub Repository](https://github.com/BurakOzcancf/what-to-eat)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [LIVE PREVIEW](https://what-to-eat-app.netlify.app/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [Contributing Guide](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/setting-guidelines-for-repository-contributors)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## My process
 
-### `npm run eject`
+### Tech I used
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- SCSS
+- [React](https://reactjs.org/) - JS library
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Built with
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- useContext, useState, useEffect, React-Router, axios
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- Form
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Author
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Website - [Burak Ozcan](https://burakozcan.netlify.app/)
+- GitHub - [BurakOzcancf](https://github.com/BurakOzcancf/Counrtries)
+- Twitter - [@MyNameIsOzcan](https://twitter.com/MyNameIsOzcan)

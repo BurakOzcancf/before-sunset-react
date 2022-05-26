@@ -1,0 +1,26 @@
+.loading {
+  margin: 5rem auto;
+  text-align: center;
+  .loading__spinner {
+    font-size: 10rem;
+    animation: loading 2s forwards infinite;
+  }
+  .loading__text {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0);
+  }
+
+  50% {
+    transform: rotateY(180deg) rotateX(270deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

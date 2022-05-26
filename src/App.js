@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { useState } from "react";
+import { MainContext } from "./Components/context";
+import Header from "./Components/Header";
+import Years from "./Components/Years";
+import Loading from "./Components/Loading";
+import Error from "./Components/Error";
 function App() {
+  const [query, setQuery] = useState("OL26320A");
+  const [search, setSearch] = useState("");
+  const [book, setBook] = useState("");
+  const data = {
+    query,
+    setQuery,
+    search,
+    setSearch,
+    book,
+    setBook,
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MainContext.Provider value={data}>
+      <Header />
+      <Years />
+      <Loading />
+      <Error />
+    </MainContext.Provider>
   );
 }
 
