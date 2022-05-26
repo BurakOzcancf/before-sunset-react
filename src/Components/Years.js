@@ -10,6 +10,7 @@ const Years = () => {
   const { query, book, setBook } = useContext(MainContext);
   let dates = [];
   //OL1394244A
+  //OL23919A
 
   useEffect(() => {
     axios
@@ -36,81 +37,86 @@ const Years = () => {
     setSelected(key);
   };
 
+  console.log(book);
   sortDates();
-
   return (
     <main>
-      {dates.map((year, index) => (
-        <section className="years__container" key={index}>
-          <h2 className="years__date">{year}</h2>
-          <div
-            className="years__line"
-            style={{
-              background: `rgb(${255 - (255 / dates.length) * index},${
-                (128 / dates.length) * index
-              },0)`,
-            }}
-          ></div>
-          {book && (
-            <ul>
-              {book.map(
-                (item) =>
-                  year === item.first_publish_year && (
-                    <li key={item.key} onClick={() => isOpen(item.key)}>
-                      <div
-                        className="years__book"
-                        style={{ marginBottom: "0.5rem" }}
-                      >
-                        <div className="years__title">
-                          <h3>
-                            {selected === item.key
-                              ? item.title
-                              : item.title.length > 20
-                              ? item.title.substring(0, 20) + "..."
-                              : item.title}
-                          </h3>
-                          <MdArrowForwardIos
+      <h2 className="years__author"> {book[0]?.author_name[0]} </h2>
+      <section className="years">
+        {dates.map((year, index) => (
+          <div className="years__container" key={index}>
+            <h2 className="years__date">{year}</h2>
+            <div
+              className="years__line"
+              style={{
+                background: `rgb(${255 - (255 / dates.length) * index},${
+                  (128 / dates.length) * index
+                },0)`,
+              }}
+            ></div>
+            {book && (
+              <ul>
+                {book.map(
+                  (item) =>
+                    year === item.first_publish_year && (
+                      <li key={item.key} onClick={() => isOpen(item.key)}>
+                        <div
+                          className="years__book"
+                          style={{ marginBottom: "0.5rem" }}
+                        >
+                          <div className="years__title">
+                            <h3>
+                              {selected === item.key
+                                ? item.title
+                                : item.title.length > 20
+                                ? item.title.substring(0, 20) + "..."
+                                : item.title}
+                            </h3>
+                            <MdArrowForwardIos
+                              className={
+                                selected === item.key
+                                  ? "years__icon--active"
+                                  : "years__icon"
+                              }
+                            />
+                          </div>
+
+                          <ul
                             className={
                               selected === item.key
-                                ? "years__icon--active"
-                                : "years__icon"
+                                ? "years__content--open"
+                                : "years__content"
                             }
-                          />
+                          >
+                            <li className="years__edition">
+                              {item.edition_count}
+                              {item.edition_count > 1
+                                ? ` Editions`
+                                : " Edition"}
+                            </li>
+                            <li>
+                              First Published:{" "}
+                              <span>{item.first_publish_year}</span>
+                            </li>
+                            <li>
+                              <IoIosApps />
+                              <span> {item.number_of_pages_median}</span> pages
+                            </li>
+                            <li>
+                              <BiBookReader />{" "}
+                              <span>{item.number_of_pages_median * 1.5}</span>{" "}
+                              minutes
+                            </li>
+                          </ul>
                         </div>
-
-                        <ul
-                          className={
-                            selected === item.key
-                              ? "years__content--open"
-                              : "years__content"
-                          }
-                        >
-                          <li className="years__edition">
-                            {item.edition_count}
-                            {item.edition_count > 1 ? ` Editions` : " Edition"}
-                          </li>
-                          <li>
-                            First Published:{" "}
-                            <span>{item.first_publish_year}</span>
-                          </li>
-                          <li>
-                            <IoIosApps />
-                            <span> {item.number_of_pages_median}</span> pages
-                          </li>
-                          <li>
-                            <BiBookReader />{" "}
-                            <span>{item.number_of_pages_median * 1.5}</span>{" "}
-                            minutes
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                  )
-              )}
-            </ul>
-          )}
-        </section>
-      ))}
+                      </li>
+                    )
+                )}
+              </ul>
+            )}
+          </div>
+        ))}
+      </section>
     </main>
   );
 };

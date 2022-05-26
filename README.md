@@ -1,4 +1,4 @@
-<h1 align="center"> what to EAT?</h1>
+<h1 align="center">Bookilify</h1>
 <p>It's a kanban board to list the books of a certain author; it distributes the books to columns by last published date. Books are retrieved from the openlibrary.org API.</p>
 
 ## Table of contents

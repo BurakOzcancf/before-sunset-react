@@ -1,21 +1,27 @@
-main {
+.years__author {
+  padding: 1.5rem 1.5rem 0.5rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+}
+.years {
   overflow-x: auto;
   display: flex;
   max-height: 700px;
 }
 
-main::-webkit-scrollbar {
+.years::-webkit-scrollbar {
   border-radius: 0.5rem;
   height: 0.8rem;
 }
 
-main::-webkit-scrollbar-track {
+.years::-webkit-scrollbar-track {
   border-radius: 0.5rem;
   margin: 1rem;
   background: linear-gradient(to right, rgb(255, 0, 0), rgb(0, 128, 0));
 }
 
-main::-webkit-scrollbar-thumb {
+.years::-webkit-scrollbar-thumb {
   border-radius: 0.5rem;
   background-color: gainsboro;
 }
