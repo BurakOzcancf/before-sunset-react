@@ -1,5 +1,4 @@
 <h1 align="center"> what to EAT?</h1>
-<!-- <img src=./public/assets/what-to-eat.PNG> -->
 <p>It's a kanban board to list the books of a certain author; it distributes the books to columns by last published date. Books are retrieved from the openlibrary.org API.</p>
 
 ## Table of contents
@@ -40,9 +39,9 @@ The user is a book collector, especially into < your favorite author here > 's b
 
 ### Links
 
-- [The GitHub Repository](https://github.com/BurakOzcancf/what-to-eat)
+- [The GitHub Repository](https://github.com/BurakOzcancf/before-sunset-react)
 
-- [LIVE PREVIEW](https://what-to-eat-app.netlify.app/)
+- [LIVE PREVIEW](https://bookilify.netlify.app/)
 
 - [Contributing Guide](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/setting-guidelines-for-repository-contributors)
 
@@ -55,7 +54,7 @@ The user is a book collector, especially into < your favorite author here > 's b
 
 ### Built with
 
-- useContext, useState, useEffect, React-Router, axios
+- useContext, useState, useEffect, axios
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
@@ -65,5 +64,5 @@ The user is a book collector, especially into < your favorite author here > 's b
 ## Author
 
 - Website - [Burak Ozcan](https://burakozcan.netlify.app/)
-- GitHub - [BurakOzcancf](https://github.com/BurakOzcancf/Counrtries)
+- GitHub - [BurakOzcancf](https://github.com/BurakOzcancf/)
 - Twitter - [@MyNameIsOzcan](https://twitter.com/MyNameIsOzcan)

@@ -13,7 +13,7 @@ const Years = () => {
 
   useEffect(() => {
     axios
-      .get(`http://openlibrary.org/search.json?language=eng&author=${query}`)
+      .get(`//openlibrary.org/search.json?language=eng&author=${query}`)
       .then((response) => {
         setBook(response.data.docs);
       });
